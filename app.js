@@ -4,6 +4,8 @@ const fs = require('fs');
 const url = require('url');
 const { log } = require('console');
 
+const PORT = process.env.PORT || 8000;
+
 //EXPORT YOUR MODULE
 const replaceTemplate = require('./modules/replaceTemplate');
 
@@ -43,6 +45,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+server.listen(PORT, () => {
   console.log('Listening to port 8000');
 });
